@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.omnirom.omnijaws"
+    xmlns:tools="http://schemas.android.com/tools"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -7,7 +8,6 @@
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -27,6 +27,11 @@
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true"
         android:icon="@drawable/omnirom_logo" >
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            tools:replace="android:authorities"/>
 
         <activity
             android:name=".SettingsActivity"
