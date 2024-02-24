@@ -44,7 +44,7 @@ public class OpenWeatherMapProvider extends AbstractWeatherProvider {
     private List<String> mKeys = new ArrayList<String>();
     private boolean mHasAPIKey;
     private int mRequestNumber;
-    private static final String DEVICE = "ro.superior.device";
+    private static final String DEVICE = "ro.derpfest.device";
 
     public OpenWeatherMapProvider(Context context) {
         super(context);
